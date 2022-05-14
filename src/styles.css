@@ -1,3 +1,7 @@
+.vanilla-weather-app-wrapper {
+  max-width: 797px;
+  margin: 0 auto;
+}
 body {
   font-family: sans-serif;
 }
@@ -16,6 +20,7 @@ h1 {
 }
 .github-link {
   text-align: center;
+  padding-left: 265px;
 }
 .parent {
   position: relative;
@@ -24,15 +29,15 @@ h1 {
   font-size: 25px;
 }
 .ninedegrees {
-  position: relative;
-  left: 500px;
-  top: 100px;
-  font-size: 80px;
-}
-.littlestars {
-  position: relative;
+  float: right;
   left: 5px;
   top: 40px;
+  font-size: 90px;
+}
+.littlestars {
+  position: static;
+  left: 500px;
+  top: 100px;
   font-size: 40px;
 }
 button {
@@ -78,6 +83,7 @@ button:hover span:after {
 }
 .card-group {
   text-align: center;
+  margin: 2.5px;
 }
 .card-mon {
   background-color: #ffcb87;
@@ -128,4 +134,14 @@ button:hover span:after {
 .card-text-fri-degree {
   margin-top: -20px;
   font-size: 20px;
+}
+li {
+  font-size: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: rgb(135, 135, 135);
+}
+ul {
+  padding-left: 0;
 }
