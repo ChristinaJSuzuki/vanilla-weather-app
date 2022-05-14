@@ -17,91 +17,102 @@
   </head>
 
   <body>
-    <div id="app"></div>
-
-    <div class="container">
-      <div class="parent">
-        <div class="card" style="width: 50rem">
-          <form class="search-form" id="search-form">
-            <div
-              class="box"
-              id="search-form"
-              style="height: 30px; width: 235px; margin: 10px 230px 0px"
-            >
-              <input
-                type="search"
-                placeholder="Enter Location"
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-              />
-              <input type="submit" value="Go" />
-            </div>
-          </form>
-          <div class="card-body" style="width: 800px; height: 503px">
-            <div class="london">
-              <h1 class="card-title" id="city">London, England</h1>
-            </div>
-            <h1 class="card-text">
-              <div class="current-time">
-                <p id="date"></p>
+    <div class="vanilla-weather-app-wrapper">
+      <div class="container">
+        <div class="parent">
+          <div class="card" style="width: 50rem">
+            <form class="search-form" id="search-form">
+              <div
+                class="box"
+                id="search-form"
+                style="height: 30px; width: 235px; margin: 10px 230px 0px"
+              >
+                <input
+                  type="search"
+                  placeholder="Enter Location"
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                />
+                <input type="submit" value="Go" />
               </div>
-              <div class="ninedegrees">
-                <span class="temperature" id="temperature">9</span>
-                <span class="units" style="font-size: 18pt"
-                  ><a href="#" id="celsius-link">°C </a>|
-                  <a href="#" id="fahrenheit-link">°F</a></span
-                >
+            </form>
+            <div class="card-body" style="width: 797px; height: 478px">
+              <div class="london">
+                <h1 class="card-title" id="city">London, England</h1>
               </div>
-              <div class="littlestars">
-                <p>☆.。.:*・°☆.。.:*・°</p>
-              </div>
-            </h1>
-            <div class="card-group">
-              <div class="card-mon" style="width: 9.5rem; height: 7.3rem">
-                <div class="card-body-mon">
-                  <h5 class="card-title-mon">MON</h5>
-                  <p class="card-text-mon">☁️</p>
-                  <p class="card-text-mon-degree">17°C</p>
+              <h1 class="card-text">
+                <div class="current-time">
+                  <p id="date"></p>
                 </div>
-              </div>
-              <div class="card-tue" style="width: 9.5rem; height: 7.3rem">
-                <div class="card-body-tue">
-                  <h5 class="card-title-tue">TUE</h5>
-                  <p class="card-text-tue">🌧️</p>
-                  <p class="card-text-tue-degree">10°C</p>
+                <div class="col-6">
+                  <ul>
+                    <li>Precipitation: 0%</li>
+                    <li>Humidity: 73%</li>
+                    <li>Wind: 2km/h</li>
+                  </ul>
                 </div>
-              </div>
-              <div class="card-wed" style="width: 9.5rem; height: 7.3rem">
-                <div class="card-body-wed">
-                  <h5 class="card-title-wed">WED</h5>
-                  <p class="card-text-wed">🌧️</p>
-                  <p class="card-text-wed-degree">11°C</p>
+                <div class="ninedegrees">
+                  <span class="temperature" id="temperature">9</span>
+                  <span class="units" style="font-size: 18pt"
+                    ><a href="#" id="celsius-link">°C </a>|
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
                 </div>
-              </div>
-              <div class="card-thu" style="width: 9.5rem; height: 7.3rem">
-                <div class="card-body-thu">
-                  <h5 class="card-title-thu">THU</h5>
-                  <p class="card-text-thu">🌧️</p>
-                  <p class="card-text-thu-degree">7°C</p>
+                <div class="littlestars">
+                  <p>☆.。.:*・°☆.。.:*・°</p>
                 </div>
-              </div>
-              <div class="card-fri" style="width: 9.5rem; height: 7.3rem">
-                <div class="card-body-fri">
-                  <h5 class="card-title-fri">FRI</h5>
-                  <p class="card-text-fri">🌤️</p>
-                  <p class="card-text-fri-degree">9°C</p>
+              </h1>
+              <div class="card-group">
+                <div class="card-mon" style="width: 9.5rem; height: 7.3rem">
+                  <div class="card-body-mon">
+                    <h5 class="card-title-mon">MON</h5>
+                    <p class="card-text-mon">☁️</p>
+                    <p class="card-text-mon-degree">17°C</p>
+                  </div>
+                </div>
+                <div class="card-tue" style="width: 9.5rem; height: 7.3rem">
+                  <div class="card-body-tue">
+                    <h5 class="card-title-tue">TUE</h5>
+                    <p class="card-text-tue">🌧️</p>
+                    <p class="card-text-tue-degree">10°C</p>
+                  </div>
+                </div>
+                <div class="card-wed" style="width: 9.5rem; height: 7.3rem">
+                  <div class="card-body-wed">
+                    <h5 class="card-title-wed">WED</h5>
+                    <p class="card-text-wed">🌧️</p>
+                    <p class="card-text-wed-degree">11°C</p>
+                  </div>
+                </div>
+                <div class="card-thu" style="width: 9.5rem; height: 7.3rem">
+                  <div class="card-body-thu">
+                    <h5 class="card-title-thu">THU</h5>
+                    <p class="card-text-thu">🌧️</p>
+                    <p class="card-text-thu-degree">7°C</p>
+                  </div>
+                </div>
+                <div class="card-fri" style="width: 9.5rem; height: 7.3rem">
+                  <div class="card-body-fri">
+                    <h5 class="card-title-fri">FRI</h5>
+                    <p class="card-text-fri">🌤️</p>
+                    <p class="card-text-fri-degree">9°C</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <span class="github-link">
+        <a
+          href="https://github.com/ChristinaJSuzuki/vanilla-weather-app.git"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Christina J Suzuki
+      </span>
     </div>
-    <span class="github-link">
-      <p>https://github.com/ChristinaJSuzuki/vanilla-weather-app.git</p>
-    </span>
-
     <script src="src/index.js"></script>
   </body>
 </html>
