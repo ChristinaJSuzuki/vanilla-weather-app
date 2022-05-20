@@ -25,10 +25,17 @@ function formatDate(date) {
 }
 
 function displayWeatherCondition(response) {
+  console.log(response.data);
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.main.wind.speed);
 }
 
 function search(event) {
@@ -48,8 +55,9 @@ function search(event) {
 
 function convertToFahrenheit(event) {
   event.preventDefault();
+  let convertToFahrenheit = (19 * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+  temperatureElement.innerHTML = Math.round(convertToFahrenheit);
 }
 
 function convertToCelsius(event) {
