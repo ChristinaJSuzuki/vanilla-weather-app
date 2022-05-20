@@ -142,6 +142,9 @@ li {
   padding: 0;
   color: rgb(135, 135, 135);
 }
+li::first-letter {
+  text-transform: capitalize;
+}
 ul {
   padding-left: 0;
 }
