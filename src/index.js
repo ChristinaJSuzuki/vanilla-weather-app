@@ -35,7 +35,8 @@ function displayWeatherCondition(response) {
   );
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.main.wind.speed);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  celsiusTemp = response.data.main.temp;
 }
 
 function search(event) {
@@ -55,7 +56,7 @@ function search(event) {
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let convertToFahrenheit = (19 * 9) / 5 + 32;
+  let convertToFahrenheit = Math.round((celsiusTemp * 9) / 5 + 32);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(convertToFahrenheit);
 }
@@ -63,7 +64,7 @@ function convertToFahrenheit(event) {
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
 
 // Feature #1
@@ -82,3 +83,5 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+let celsiusTemp = null;
