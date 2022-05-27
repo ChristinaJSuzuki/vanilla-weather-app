@@ -83,7 +83,7 @@ button:hover span:after {
 }
 .card-group {
   text-align: center;
-  margin: 2.5px;
+  margin: 1.2px;
 }
 .card-mon {
   background-color: #ffcb87;
@@ -116,7 +116,7 @@ button:hover span:after {
   font-size: 40px;
 }
 .card-text-mon-degree {
-  margin-top: -20px;
+  margin-top: 20px;
   font-size: 20px;
 }
 .card-text-tue-degree {
