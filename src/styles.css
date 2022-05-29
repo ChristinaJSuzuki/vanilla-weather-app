@@ -85,55 +85,32 @@ button:hover span:after {
   text-align: center;
   margin: 1.2px;
 }
-.card-mon {
+.card-0 {
   background-color: #ffcb87;
 }
-.card-tue {
+.card-1 {
   background-color: #f7f188;
 }
-.card-wed {
+.card-2 {
   background-color: #92c9f9;
 }
-.card-thu {
+.card-3 {
   background-color: #88d1cb;
 }
-.card-fri {
+.card-4 {
   background-color: #99ce99;
 }
-.card-text-mon {
+.card-text {
   font-size: 40px;
 }
-.card-text-tue {
-  font-size: 40px;
-}
-.card-text-wed {
-  font-size: 40px;
-}
-.card-text-thu {
-  font-size: 40px;
-}
-.card-text-fri {
-  font-size: 40px;
-}
-.card-text-mon-degree {
+.card-text-degree-max {
   margin-top: 20px;
   font-size: 20px;
 }
-.card-text-tue-degree {
-  margin-top: -20px;
+.card-text-degree-min {
+  margin-top: 20px;
   font-size: 20px;
-}
-.card-text-wed-degree {
-  margin-top: -20px;
-  font-size: 20px;
-}
-.card-text-thu-degree {
-  margin-top: -20px;
-  font-size: 20px;
-}
-.card-text-fri-degree {
-  margin-top: -20px;
-  font-size: 20px;
+  opacity: 0.6;
 }
 li {
   font-size: 15px;
