@@ -26,48 +26,29 @@ function formatDate(date) {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
 
-  forecastElement.innerHTML = `<div class="card-group" id="forecast">
-                <div class="card-mon" style="width: 9.5rem; height: 7.3rem">
-                  <div class="card-body-mon">
-                    <h5 class="card-title-mon">MON</h5>
-                    <img
-                      src="http://openweathermap.org/img/wn/50d@2x.png"
-                      alt=""
-                      width="36"
-                    />
-                    <p class="card-text-mon-degree">17°C</p>
-                  </div>
-                </div>
-                <div class="card-tue" style="width: 9.5rem; height: 7.3rem">
-                  <div class="card-body-tue">
-                    <h5 class="card-title-tue">TUE</h5>
-                    <p class="card-text-tue">🌧️</p>
-                    <p class="card-text-tue-degree">10°C</p>
-                  </div>
-                </div>
-                <div class="card-wed" style="width: 9.5rem; height: 7.3rem">
-                  <div class="card-body-wed">
-                    <h5 class="card-title-wed">WED</h5>
-                    <p class="card-text-wed">🌧️</p>
-                    <p class="card-text-wed-degree">11°C</p>
-                  </div>
-                </div>
-                <div class="card-thu" style="width: 9.5rem; height: 7.3rem">
-                  <div class="card-body-thu">
-                    <h5 class="card-title-thu">THU</h5>
-                    <p class="card-text-thu">🌧️</p>
-                    <p class="card-text-thu-degree">7°C</p>
-                  </div>
-                </div>
-                <div class="card-fri" style="width: 9.5rem; height: 7.3rem">
-                  <div class="card-body-fri">
-                    <h5 class="card-title-fri">FRI</h5>
-                    <p class="card-text-fri">🌤️</p>
-                    <p class="card-text-fri-degree">9°C</p>
-                  </div>
-                </div>
-              </div>`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+
+  days.forEach(function (day, index) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="card-${index}" style="width: 9.5rem; height: 7.3rem">
+    <div class="card-body-mon">
+      <h5 class="card-title">${day}</h5>
+      <img
+        src="http://openweathermap.org/img/wn/50d@2x.png"
+        alt=""
+        width="36"
+      />
+      <div class="weather-forecast-temperatures">
+         <span class="card-text-degree-max"> 17° </span>
+         <span class="card-text-degree-min"> 12° </span>
+      </div>
+    </div>
+  </div>`;
+  });
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function displayWeatherCondition(response) {
