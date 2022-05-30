@@ -46,12 +46,13 @@ function displayForecast(response) {
         `<div class="card-${index}" style="width: 9.5rem; height: 7.3rem">
     <div class="card-body-mon">
       <h5 class="card-title">${formatDay(forecastDay.dt)}</h5>
-      <img
+     <img
         src="http://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
         }@2x.png"
         alt=""
         width="36"
+        class="forecast-icon"
       />
       <div class="weather-forecast-temperatures">
          <span class="card-text-degree-max"> ${Math.round(
@@ -100,18 +101,18 @@ function displayWeatherCondition(response) {
 
 function search(event) {
   event.preventDefault();
-  let apiKey = "6ac9a1cc92ffe9350e80d02a2878b056";
   let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
+
+function searchCity(city) {
+  let apiKey = "6ac9a1cc92ffe9350e80d02a2878b056";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeatherCondition);
-
-  //let cityElement = document.querySelector("#city");
-  //let cityInput = document.querySelector("#city-input");
-  //cityElement.innerHTML = cityInput.value;
-  //make an API call to OpenWeather API
-  //Once I get the HTTP response, we display the city name and the temperature
 }
+
+searchCity("London");
 
 function convertToFahrenheit(event) {
   event.preventDefault();
